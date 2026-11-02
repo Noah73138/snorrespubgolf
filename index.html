@@ -136,6 +136,7 @@ td.tot{font-family:var(--f-num);font-weight:500;background:#f2f6ee}
 .btn{border:0;border-radius:999px;padding:12px 20px;font-weight:800;font-size:1rem}
 .btn.go{background:var(--pink);color:var(--chalk);box-shadow:4px 4px 0 var(--sun)}
 .btn.go.arm{background:var(--sun);color:var(--ink);box-shadow:4px 4px 0 var(--pink)}
+.orgnote{margin:10px 0 0;color:var(--muted);font-size:.85rem;max-width:62ch}
 .btn.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,.25);padding:10px 16px;font-size:.9rem}
 
 /* save bar */
@@ -198,6 +199,22 @@ var FIREBASE_CONFIG = {
 var HOLES_ENC="==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";
 var HOLES=JSON.parse(decodeURIComponent(escape(atob(HOLES_ENC.split("").reverse().join("")))));
 var DEFAULT={hole:0,teams:{"t1": {"name": "Hole in Wine", "players": ["Bjørne", "Ingunn"], "color": "#ff4fa3", "ink": "#c4166f"}, "t2": {"name": "Sip Happens", "players": ["Oli", "Smilla"], "color": "#4cc9ff", "ink": "#0a78a8"}, "t3": {"name": "The Mulligans", "players": ["Noah", "Eva"], "color": "#ffd23f", "ink": "#9a7600"}, "t4": {"name": "Bogey Boys", "players": ["Freddy", "Albin"], "color": "#ff8a3d", "ink": "#b9520c"}, "t5": {"name": "Birdie Brains", "players": ["Halvor", "Alma"], "color": "#b48cff", "ink": "#6a3fd0"}}};
+var POOL_MEN=["Noah","Oli","Freddy","Bjørne","Albin","Halvor"];
+var POOL_WOMEN=["Alma","Eva","Ingunn","Smilla"];
+function shuffled(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var x=a[i];a[i]=a[j];a[j]=x;}return a}
+function randomTeams(){
+  var m=shuffled(POOL_MEN),w=shuffled(POOL_WOMEN),pairs=[];
+  for(var i=0;i<w.length;i++)pairs.push([m[i],w[i]]);
+  for(var k=w.length;k<m.length;k+=2)pairs.push(m.slice(k,k+2));
+  pairs=shuffled(pairs);
+  var out={};
+  Object.keys(state.teams).sort().forEach(function(id,i){
+    var t=state.teams[id];
+    out[id]={name:t.name,players:pairs[i],color:t.color,ink:t.ink};
+  });
+  return out;
+}
+function cleanTeams(){var out={};Object.keys(state.teams).forEach(function(id){var t=state.teams[id];out[id]={name:t.name,players:t.players,color:t.color,ink:t.ink}});return out}
 var MYTEAM="pubgolf-myteam";
 var ADMIN=/[?&]admin\b/.test(location.search);
 var state={hole:0,teams:DEFAULT.teams,scores:{},picks:{}};
@@ -350,8 +367,10 @@ function render(){
     var label=H>=9?(H===9?"Finish the round":""):"Tee off hole "+(H+1);
     html+='<section class="sec"><div class="sec-h"><h2>Organiser</h2><p>Only on your admin link</p></div><div class="org">'+
       (label?'<button id="adv" class="btn go'+(armed==="adv"?" arm":"")+'">'+(armed==="adv"?"Tap again to confirm":label)+'</button>':'')+
+      (H===0?'<button id="shuffle" class="btn go'+(armed==="shuffle"?" arm":"")+'">'+(armed==="shuffle"?"Tap again to shuffle":"🎲 Random teams")+'</button>':'')+
       (H>0?'<button id="back" class="btn ghost">Back one hole</button>':'')+
-      '<button id="wipe" class="btn ghost">'+(armed==="wipe"?"Tap again: wipes every score":"Reset game")+'</button></div></section>';
+      '<button id="wipe" class="btn ghost">'+(armed==="wipe"?"Tap again: wipes every score":"Reset game")+'</button></div>'+
+      (H===0?'<p class="orgnote">Random teams pairs one guy with one girl, and the last two guys team up. Team names stay with their colour, so shuffle before anyone renames.</p>':'<p class="orgnote">Random teams is only available before hole 1. Reset the game to shuffle again.</p>')+'</section>';
   }
 
   html+='<section class="sec"><div class="sec-h"><h2>House rules</h2></div><div class="rules"><ol>'+
@@ -391,7 +410,8 @@ document.addEventListener("click",function(e){
   if(b.dataset.rename){editing=b.dataset.rename;render();return;}
   if(b.id==="adv"){if(armed!=="adv")return arm("adv");armed=null;write("hole",Math.min(10,H+1));return;}
   if(b.id==="back"){write("hole",Math.max(0,H-1));return;}
-  if(b.id==="wipe"){if(armed!=="wipe")return arm("wipe");armed=null;root.set(DEFAULT);return;}
+  if(b.id==="wipe"){if(armed!=="wipe")return arm("wipe");armed=null;root.set({hole:0,teams:cleanTeams()});return;}
+  if(b.id==="shuffle"){if(H!==0)return;if(armed!=="shuffle")return arm("shuffle");armed=null;root.update({teams:randomTeams(),scores:null,picks:null});return;}
 });
 document.addEventListener("submit",function(e){
   var f=e.target.closest("form.rename");if(!f)return;
